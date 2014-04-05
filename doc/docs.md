@@ -1,6 +1,7 @@
 # functions
 
-###debug("hello")
+###debug()
+*example: debug("hello")*
 
 Sends "hello" to the Minecraft chat. Useful for debugging your programs.
 
