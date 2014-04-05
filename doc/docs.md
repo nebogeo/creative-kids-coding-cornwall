@@ -1,3 +1,8 @@
+# dBsCode Minecraft Documentation
+
+This is for the dBsCode taster sessions. Quick cheet sheet of all the
+functions needed for the workshop.
+
 # functions
 
 ###debug()
@@ -77,7 +82,45 @@ Quick way to get back to the centre of the world (spawn point)
 
 # randomness
 
+### random_range(from,to)
+*example: random_range(0,10)*
 
+Returns a random number between from and to.
+
+### choose_one(list, of, things)
+*example: choose_one(STONE,GRASS,DIRT,BEDROCK)*
+
+Returns a random choice of the things given.
+
+### random_point(from, to)
+*example: random_point(point(0,0,0),point(10,10,10))
+
+Returns a random point inside the box you specify with the two points,
+different every time.
+
+# functions and looping
+
+You can make your own functions from these simple ones. This is the
+essence of programming, as you can break problems down into simpler
+ones. We use 'def' to create a new function:
+
+`def hollow_cylinder(blocktype, position, inner_radius, outer_radius, length):
+    cylinder(blocktype,position,outer_radius,length)
+    cylinder(AIR,position,inner_radius,length)'
+
+Will make a function to create a hollow cylinder (by building one then cutting
+the inner one out) which you can then use like so:
+
+hollow_cylinder(CLAY,point(0,0,0),4,6,10)
+
+# looping
+
+We use 'for' for looping:
+
+'for i in range(0,10):
+    cube(GOLD_BLOCK,point(i*10,0,0),point(5,5,5))'
+
+Will make a row of gold cubes
 
 # block types
 
