@@ -87,8 +87,11 @@ def random_point(a,b):
 				 random.randrange(a.y,b.y),
 				 random.randrange(a.z,b.z))
 
-def choose(l):
-	return l[random.randint(0,len(l)-1)]
+def random_range(a,b):
+	return random.randint(a,b)
+
+def choose_one(*argv):
+	return argv[random.randint(0,len(argv)-1)]
 
 def i_am_lost():
 	move_me_to(point(0,20,0))
@@ -122,15 +125,14 @@ def house(roof,walls,size,pos,flip):
 	box(walls,pos+point(4,7+size,1),point(3,2,6))
 	box(AIR,pos+point(3,0,2),point(5,7+size,4))
 	doorpos=6
-	if flip:
-		doorpos=1
+	if flip: doorpos=1
 	box(AIR,pos+point(4,0,doorpos),point(3,4,1))
 
 def street(pos,length,side):
 	for i in range(0,10):
-		house(choose([MELON,GOLD_BLOCK,WOOD,COBBLESTONE]),
-			choose([BRICK_BLOCK,COBBLESTONE,BEDROCK,SANDSTONE,LAPIS_LAZULI_BLOCK]),
-			random.randint(-3,5),pos+point(-40+i*10,0,-15),
+		house(choose_one(MELON,GOLD_BLOCK,WOOD,COBBLESTONE),
+			choose_one(BRICK_BLOCK,COBBLESTONE,BEDROCK,SANDSTONE,LAPIS_LAZULI_BLOCK),
+			random_range(-3,5),pos+point(-40+i*10,0,-15),
 			side)
 
 street(point(0,0,0),6,True)
