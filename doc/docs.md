@@ -93,7 +93,7 @@ Returns a random number between from and to.
 Returns a random choice of the things given.
 
 ### random_point(from, to)
-*example: random_point(point(0,0,0),point(10,10,10))
+*example: random_point(point(0,0,0),point(10,10,10))*
 
 Returns a random point inside the box you specify with the two points,
 different every time.
@@ -106,7 +106,7 @@ ones. We use 'def' to create a new function:
 
 `def hollow_cylinder(blocktype, position, inner_radius, outer_radius, length):
     cylinder(blocktype,position,outer_radius,length)
-    cylinder(AIR,position,inner_radius,length)'
+    cylinder(AIR,position,inner_radius,length)`
 
 Will make a function to create a hollow cylinder (by building one then cutting
 the inner one out) which you can then use like so:
