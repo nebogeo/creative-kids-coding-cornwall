@@ -6,7 +6,7 @@ functions needed for the workshop.
 # functions
 
 ###debug()
-*example: debug("hello")*
+example: `debug("hello")`
 
 Sends "hello" to the Minecraft chat. Useful for debugging your programs.
 
