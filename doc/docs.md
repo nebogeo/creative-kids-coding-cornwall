@@ -20,18 +20,30 @@ ones. They all take a block type, if this is set to AIR then the
 shape will 'eat into' other shapes made previously.
 
 ###box(blocktype, position_point, size_point)
-Example: box(CLAY, point(0,0,0), point(10,10,10))
+*example: box(CLAY, point(0,0,0), point(10,10,10))*
 
 Will create a 10x10x10 block of clay in the middle of the world (0,0,0)
 
 ###sphere(blocktype, centre_point, radius)
-###sphere(MELON, point(0,10,0), 10)
+*example: sphere(MELON, point(0,10,0), 10)*
 
 Will create a sphere of melon slightly above the centre of the world
 with a radius of 10 blocks.
 
+###cylinder(blocktype,position_point,radius,height):
+*example: cylinder(STONE_BRICK,point(0,0,0),6,20)*
 
+Builds a cylinder of stone brick in the center of the world radius 6, height 20.
 
+###cone(blocktype,position_point,radius,height):
+*example: cone(WOOD,point(0,0,0),6,20)*
+
+Same as cylinder, but with a sharp point at the top.
+
+###toblerone(blocktype,position_point,size_point)
+*example:  toblerone(GLASS,point(0,0,0),point(10,10,3))*
+
+Makes a 'toblerone', commonly refered to as a prism. Useful for roof building.
 
 ## maths
 
