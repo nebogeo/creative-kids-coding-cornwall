@@ -22,7 +22,7 @@ Everything in Minecraft is three dimensional, so we need to use 3 numbers to
 specify locations and sizes of things. For positioning, it's useful to look at
 the X,Y,Z coordinates at the top left of the Minecraft window.
 
-`point(x,y,z)` : returns a new point*
+`point(x,y,z)` : returns a new point
 
 Points can be added or subtracted, for example:
 
