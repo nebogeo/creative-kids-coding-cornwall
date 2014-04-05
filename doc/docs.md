@@ -22,15 +22,15 @@ Everything in Minecraft is three dimensional, so we need to use 3 numbers to
 specify locations and sizes of things. For positioning, it's useful to look at
 the X,Y,Z coordinates at the top left of the Minecraft window.
 
-*point(x,y,z) : returns a new point*
+`point(x,y,z)` : returns a new point*
 
 Points can be added or subtracted, for example:
 
-*newpoint = point(10,0,2) + point(1,2,3)*
+`newpoint = point(10,0,2) + point(1,2,3)`
 
 Will result in newpoint containing x=11 y=2 z=5
 
-*distance(point_a,point_b)*
+`distance(point_a,point_b)`
 
 Returns the distance between two points.
 
@@ -41,28 +41,28 @@ ones. They all take a block type, if this is set to AIR then the
 shape will 'eat into' other shapes made previously.
 
 ###box(blocktype, position_point, size_point)
-*example: box(CLAY, point(0,0,0), point(10,10,10))*
+example: `box(CLAY, point(0,0,0), point(10,10,10))`
 
 Will create a 10x10x10 block of clay in the middle of the world (0,0,0)
 
 ###sphere(blocktype, centre_point, radius)
-*example: sphere(MELON, point(0,10,0), 10)*
+example: `sphere(MELON, point(0,10,0), 10)`
 
 Will create a sphere of melon slightly above the centre of the world
 with a radius of 10 blocks.
 
 ###cylinder(blocktype,position_point,radius,height):
-*example: cylinder(STONE_BRICK,point(0,0,0),6,20)*
+example: `cylinder(STONE_BRICK,point(0,0,0),6,20)`
 
 Builds a cylinder of stone brick in the center of the world radius 6, height 20.
 
 ###cone(blocktype,position_point,radius,height):
-*example: cone(WOOD,point(0,0,0),6,20)*
+example: `cone(WOOD,point(0,0,0),6,20)`
 
 Same as cylinder, but with a sharp point at the top.
 
 ###toblerone(blocktype,position_point,size_point)
-*example:  toblerone(GLASS,point(0,0,0),point(10,10,3))*
+example: `toblerone(GLASS,point(0,0,0),point(10,10,3))`
 
 Makes a 'toblerone', referred to by lesser mortals as a prism. Useful for roof building.
 
@@ -83,17 +83,17 @@ Quick way to get back to the centre of the world (spawn point)
 # randomness
 
 ### random_range(from,to)
-*example: random_range(0,10)*
+example: `random_range(0,10)`
 
 Returns a random number between from and to.
 
 ### choose_one(list, of, things)
-*example: choose_one(STONE,GRASS,DIRT,BEDROCK)*
+example: `choose_one(STONE,GRASS,DIRT,BEDROCK)`
 
 Returns a random choice of the things given.
 
 ### random_point(from, to)
-*example: random_point(point(0,0,0),point(10,10,10))*
+example: `random_point(point(0,0,0),point(10,10,10))`
 
 Returns a random point inside the box you specify with the two points,
 different every time.
