@@ -104,9 +104,9 @@ You can make your own functions from these simple ones. This is the
 essence of programming, as you can break problems down into simpler
 ones. We use 'def' to create a new function:
 
-`def hollow_cylinder(blocktype, position, inner_radius, outer_radius, length):
-    cylinder(blocktype,position,outer_radius,length)
-    cylinder(AIR,position,inner_radius,length)`
+    def hollow_cylinder(blocktype, position, inner_radius, outer_radius, length):
+        cylinder(blocktype,position,outer_radius,length)
+        cylinder(AIR,position,inner_radius,length)`
 
 Will make a function to create a hollow cylinder (by building one then cutting
 the inner one out) which you can then use like so:
