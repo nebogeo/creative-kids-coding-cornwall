@@ -3,7 +3,12 @@
 This is for the dBsCode taster sessions. Quick cheat sheet of all the
 functions and everything needed for the workshop.
 
-# functions
+# basics
+
+###from dbscode_minecraft import *
+
+You need to put this at the top of your script to tell Python where to
+find all the dBsCode and Minecraft commands we are using.
 
 ###debug()
 example: `debug("hello")`
