@@ -103,7 +103,7 @@ example: `random_point(point(0,0,0), point(10,10,10))`
 Returns a random point inside the box you specify with the two points,
 different every time.
 
-# functions and looping
+# functions
 
 You can make your own functions from these simple ones. This is the
 essence of programming, as you can break problems down into simpler
