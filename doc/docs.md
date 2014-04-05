@@ -14,8 +14,12 @@ run your program.
 
 ## primitives
 
-###box(blocktype, postion_point, size_point)
-###box(CLAY, point(0,0,0), point(10,10,10))
+Primitives are simple shapes you can use to create more complex
+ones. They all take a block type, if this is set to AIR then the
+shape will 'eat into' other shapes made previously.
+
+###box(blocktype, position_point, size_point)
+Example: box(CLAY, point(0,0,0), point(10,10,10))
 
 Will create a 10x10x10 block of clay in the middle of the world (0,0,0)
 
