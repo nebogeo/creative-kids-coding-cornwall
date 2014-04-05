@@ -1,4 +1,4 @@
-import dbscode_minecraft
+from dbscode_minecraft import *
 
 def planet(pos,size):
 	sphere(DIAMOND_BLOCK,pos,size)  
