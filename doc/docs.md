@@ -1,6 +1,6 @@
 # dBsCode Minecraft Documentation
 
-This is for the dBsCode taster sessions. Quick cheet sheet of all the
+This is for the dBsCode taster sessions. Quick cheat sheet of all the
 functions needed for the workshop.
 
 # functions
@@ -24,7 +24,7 @@ the X,Y,Z coordinates at the top left of the Minecraft window.
 
 *point(x,y,z) : returns a new point*
 
-Points can be added or substracted, for example:
+Points can be added or subtracted, for example:
 
 *newpoint = point(10,0,2) + point(1,2,3)*
 
@@ -64,7 +64,7 @@ Same as cylinder, but with a sharp point at the top.
 ###toblerone(blocktype,position_point,size_point)
 *example:  toblerone(GLASS,point(0,0,0),point(10,10,3))*
 
-Makes a 'toblerone', commonly refered to as a prism. Useful for roof building.
+Makes a 'toblerone', referred to by lesser mortals as a prism. Useful for roof building.
 
 # player info
 
@@ -117,8 +117,8 @@ hollow_cylinder(CLAY,point(0,0,0),4,6,10)
 
 We use 'for' for looping:
 
-'for i in range(0,10):
-    cube(GOLD_BLOCK,point(i*10,0,0),point(5,5,5))'
+    for i in range(0,10):
+        cube(GOLD_BLOCK,point(i*10,0,0),point(5,5,5))'
 
 Will make a row of gold cubes
 
