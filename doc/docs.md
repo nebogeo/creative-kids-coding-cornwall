@@ -13,8 +13,8 @@ Sends "hello" to the Minecraft chat. Useful for debugging your programs.
 ###bulldoze()
 
 Flattens a large area in the middle of the world for you to work on.  A
-good idea to call this all the time, so the world is cleared before you
-run your program.
+good idea to call this all the time from the top of your program, so the
+world is cleared before you build things.
 
 ## points
 
