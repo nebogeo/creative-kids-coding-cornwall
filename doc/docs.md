@@ -1,7 +1,7 @@
-# dBsCode Minecraft Documentation
+# dBsCode Minecraft Cheat Sheet
 
 This is for the dBsCode taster sessions. Quick cheat sheet of all the
-functions needed for the workshop.
+functions and everything needed for the workshop.
 
 # functions
 
