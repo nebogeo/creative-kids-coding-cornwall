@@ -11,7 +11,23 @@ Flattens a large area in the middle of the world for you to work on.  A
 good idea to call this all the time, so the world is cleared before you
 run your program.
 
+## points
 
+Everything in Minecraft is three dimensional, so we need to use 3 numbers to
+specify locations and sizes of things. For positioning, it's useful to look at
+the X,Y,Z coordinates at the top left of the Minecraft window.
+
+*point(x,y,z) : returns a new point*
+
+Points can be added or substracted, for example:
+
+*newpoint = point(10,0,2) + point(1,2,3)*
+
+Will result in newpoint containing x=11 y=2 z=5
+
+*distance(point_a,point_b)*
+
+Returns the distance between two points.
 
 ## primitives
 
@@ -45,16 +61,27 @@ Same as cylinder, but with a sharp point at the top.
 
 Makes a 'toblerone', commonly refered to as a prism. Useful for roof building.
 
-## maths
+# player info
 
-point(x,y,z) : returns a new point
+### my_pos()
 
-Points can be added or substracted eg:
-newpoint = point(10,0,2) + point(1,2,3)
+Returns the player position point
 
-Will result in newpoint containing x=11 y=2 z=5
+### move_me_to(position_point)
+
+Teleport the player somewhere
+
+### i_am_lost()
+
+Quick way to get back to the centre of the world (spawn point)
+
+# randomness
+
+
 
 # block types
+
+All the block type listed, there may well be more...
 
 AIR
 STONE
