@@ -51,17 +51,17 @@ example: `sphere(MELON, point(0,10,0), 10)`
 Will create a sphere of melon slightly above the centre of the world
 with a radius of 10 blocks.
 
-###cylinder(blocktype,position_point,radius,height):
+###cylinder(blocktype, position_point, radius, height):
 example: `cylinder(STONE_BRICK,point(0,0,0),6,20)`
 
 Builds a cylinder of stone brick in the center of the world radius 6, height 20.
 
-###cone(blocktype,position_point,radius,height):
+###cone(blocktype, position_point, radius, height):
 example: `cone(WOOD,point(0,0,0),6,20)`
 
 Same as cylinder, but with a sharp point at the top.
 
-###toblerone(blocktype,position_point,size_point)
+###toblerone(blocktype, position_point, size_point)
 example: `toblerone(GLASS,point(0,0,0),point(10,10,3))`
 
 Makes a 'toblerone', referred to by lesser mortals as a prism. Useful for roof building.
@@ -82,18 +82,18 @@ Quick way to get back to the centre of the world (spawn point)
 
 # randomness
 
-### random_range(from,to)
-example: `random_range(0,10)`
+### random_range(from, to)
+example: `random_range(0, 10)`
 
 Returns a random number between from and to.
 
 ### choose_one(list, of, things)
-example: `choose_one(STONE,GRASS,DIRT,BEDROCK)`
+example: `choose_one(STONE, GRASS, DIRT, BEDROCK)`
 
 Returns a random choice of the things given.
 
 ### random_point(from, to)
-example: `random_point(point(0,0,0),point(10,10,10))`
+example: `random_point(point(0,0,0), point(10,10,10))`
 
 Returns a random point inside the box you specify with the two points,
 different every time.
@@ -105,26 +105,26 @@ essence of programming, as you can break problems down into simpler
 ones. We use 'def' to create a new function:
 
     def hollow_cylinder(blocktype, position, inner_radius, outer_radius, length):
-        cylinder(blocktype,position,outer_radius,length)
-        cylinder(AIR,position,inner_radius,length)`
+        cylinder(blocktype, position, outer_radius, length)
+        cylinder(AIR, position, inner_radius, length)`
 
 Will make a function to create a hollow cylinder (by building one then cutting
 the inner one out) which you can then use like so:
 
-hollow_cylinder(CLAY,point(0,0,0),4,6,10)
+    hollow_cylinder(CLAY, point(0,0,0), 4, 6, 10)
 
 # looping
 
 We use 'for' for looping:
 
-    for i in range(0,10):
-        cube(GOLD_BLOCK,point(i*10,0,0),point(5,5,5))'
+    for i in range(0, 10):
+        cube(GOLD_BLOCK, point(i*10, 0, 0), point(5, 5, 5))'
 
-Will make a row of gold cubes
+Will make a row of gold cubes.
 
 # block types
 
-All the block type listed, there may well be more...
+All the block type listed, there may well be more... be careful with lava.
 
 AIR
 STONE
