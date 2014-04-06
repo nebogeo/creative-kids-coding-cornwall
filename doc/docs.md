@@ -50,6 +50,8 @@ example: `box(CLAY, point(0,0,0), point(10,10,10))`
 
 Will create a 10x10x10 block of clay in the middle of the world (0,0,0)
 
+![A box image](https://github.com/nebogeo/dbscode/raw/master/doc/images/box.png "How a box works")
+
 ###sphere(blocktype, centre_point, radius)
 example: `sphere(MELON, point(0,10,0), 10)`
 
