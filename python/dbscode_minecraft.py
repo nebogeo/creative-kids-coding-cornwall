@@ -31,7 +31,7 @@ mc = minecraft.Minecraft.create()
 point = Vec3
 
 def debug(msg):
-	mc.postToChat(msg)
+	mc.postToChat(str(msg))
 
 def my_pos():
 	t = mc.player.getPos()
@@ -42,7 +42,7 @@ def move_me_to(p):
 
 def read_block(p):
 	mc.getBlock(p)
-	
+
 def write_block(blocktype,p):
 	mc.setBlock(p.x,p.y,p.z,blocktype)
 
@@ -62,7 +62,7 @@ def sphere(t,pos,radius):
 		for z in range(-radius, radius):
 			for x in range(-radius, radius):
 				if math.sqrt(x*x+y*y+z*z)<radius:
-					write_block(t,point(pos.x+x,pos.y+y,pos.z+z))   
+					write_block(t,point(pos.x+x,pos.y+y,pos.z+z))
 
 def cylinder(t,pos,radius,height):
 	radius=int(radius)
@@ -71,7 +71,7 @@ def cylinder(t,pos,radius,height):
 		for z in range(-radius, radius):
 			for x in range(-radius, radius):
 				if math.sqrt(x*x+z*z)<radius:
-					write_block(t,point(pos.x+x,pos.y+y,pos.z+z))   
+					write_block(t,point(pos.x+x,pos.y+y,pos.z+z))
 
 def cone(t,pos,radius,height):
 	radius=int(radius)
@@ -80,7 +80,7 @@ def cone(t,pos,radius,height):
 		for z in range(-radius, radius):
 			for x in range(-radius, radius):
 				if math.sqrt(x*x+z*z)<(radius*(1-y/float(height))):
-					write_block(t,point(pos.x+x,pos.y+y,pos.z+z))   
+					write_block(t,point(pos.x+x,pos.y+y,pos.z+z))
 
 
 def toblerone(t,pos,size):
@@ -97,7 +97,7 @@ def mag(p):
 
 def distance(a,b):
 	return mag(a-b)
-	
+
 def random_point(a,b):
 	return point(random.randrange(a.x,b.x),
 				 random.randrange(a.y,b.y),
@@ -119,4 +119,3 @@ def bulldoze():
 	mc.setBlocks(-size/2,0,-size/2,size/2,height,size/2,AIR)
 	box(GRASS,point(-size/2,-1,-size/2),point(size,1,size))
 	print("finished bulldozing")
-

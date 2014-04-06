@@ -27,12 +27,12 @@ Everything in Minecraft is three dimensional, so we need to use 3 numbers to
 specify locations and sizes of things. For positioning, it's useful to look at
 the X,Y,Z coordinates at the top left of the Minecraft window.
 
-`point(x,y,z)` : returns a new point
+`mypoint = point(10,0,2)` : makes a new point
 
-Points can be added or subtracted, for example:
+The values of the x y and z can be retrieved with `mypoint.x`,
+`mypoint.y` or `mypoint.z`.
 
-`newpoint = point(10,0,2) + point(1,2,3)`
-
+Points can be added or subtracted, for example: `newpoint = mypoint + point(1,2,3)`
 Will result in newpoint containing x=11 y=2 z=5
 
 `distance(point_a,point_b)`
@@ -58,20 +58,28 @@ example: `sphere(MELON, point(0,10,0), 10)`
 Will create a sphere of melon slightly above the centre of the world
 with a radius of 10 blocks.
 
+![A sphere image](https://github.com/nebogeo/dbscode/raw/master/doc/images/sphere.png "How a sphere works")
+
 ###cylinder(blocktype, position_point, radius, height):
 example: `cylinder(STONE_BRICK,point(0,0,0),6,20)`
 
 Builds a cylinder of stone brick in the center of the world radius 6, height 20.
+
+![A cylinder image](https://github.com/nebogeo/dbscode/raw/master/doc/images/cylinder.png "How a cylinder works")
 
 ###cone(blocktype, position_point, radius, height):
 example: `cone(WOOD,point(0,0,0),6,20)`
 
 Same as cylinder, but with a sharp point at the top.
 
+![A cone image](https://github.com/nebogeo/dbscode/raw/master/doc/images/cone.png "How a cone works")
+
 ###toblerone(blocktype, position_point, size_point)
 example: `toblerone(GLASS,point(0,0,0),point(10,10,3))`
 
 Makes a 'toblerone', referred to by lesser mortals as a prism. Useful for roof building.
+
+![A toblerone image](https://github.com/nebogeo/dbscode/raw/master/doc/images/toblerone.png "How a toblerone works")
 
 # player info
 
