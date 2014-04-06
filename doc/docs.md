@@ -1,7 +1,9 @@
 # dBsCode Minecraft Cheat Sheet
 
-This is for the dBsCode taster sessions. Quick cheat sheet of all the
-functions and everything needed for the workshop.
+This is for the dBsCode taster sessions, learning programming via
+procedural architecture in Minecraft using the Raspberry Pi. This is a
+quick cheat sheet of all the functions and everything needed for the
+workshop.
 
 # basics
 
