@@ -1,11 +1,11 @@
-== Make a street of houses
+# Make a street of houses
 
 Before you start:
 
 Launch Minecraft and create a new world.
 Launch Geany
 
-== Step 1
+## Step 1
 
 1. Open a new file, call this `house.py` 2. First we need to import the
 dBsCode commands we'll be using and clear an area in the Minecraft world
@@ -26,4 +26,4 @@ of environment.
 coordinates at the top left of the Minecraft window). You should see a
 cube of bricks.
 
-== Step 2
+## Step 2
