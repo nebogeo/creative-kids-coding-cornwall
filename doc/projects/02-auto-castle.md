@@ -1,5 +1,7 @@
 # Auto-Minecraft-Castle
 
+![A castle](https://github.com/nebogeo/dbscode/raw/master/doc/images/auto-castle.jpg "A castle")
+
 Before you start:
 
 * Launch Minecraft and create a new world.
