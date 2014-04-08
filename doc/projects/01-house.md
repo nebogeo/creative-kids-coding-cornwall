@@ -21,7 +21,7 @@ of environment.
 
 4. Build a cube by adding this to the end of your script:
 
-    box(BRICK_BLOCK,point(0,0,0),point(10,10,10))
+     box(BRICK_BLOCK,point(0,0,0),point(10,10,10))
 
 5. **Test** Press F5 and navigate to the centre of the world (using the
 coordinates at the top left of the Minecraft window). You should see a
