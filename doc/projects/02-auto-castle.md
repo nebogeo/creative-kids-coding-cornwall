@@ -1,4 +1,4 @@
-# Auto castle for Minecraft queens and kings
+# Auto-Minecraft-Castle
 
 Before you start:
 
