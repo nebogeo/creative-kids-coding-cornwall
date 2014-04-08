@@ -60,7 +60,7 @@ in. Lets quickly add a door:
 
 ## Step 3 Make a house *function*
 
-Functions are one of the founding principles of programming - they can
+Functions are one of the founding ideas behind programming - they can
 amplify your actions, and allow you to solve difficult problems by
 breaking them into small ones.
 
@@ -73,7 +73,7 @@ lines are important - there are 4 of them:
         	toblerone(AIR,point(0,3,0),point(10,6,8))
         	box(BRICK_BLOCK,point(2,0,1),point(7,7,6))
         	box(BRICK_BLOCK,point(4,7,1),point(3,2,6))
-        	box(AIR,point(3,0,2),point(5,7+size,4))
+        	box(AIR,point(3,0,2),point(5,7,4))
         	box(AIR,point(4,0,1),point(3,4,1))
 
 Now we can "call" this function by simply adding this to the bottom of your
@@ -84,25 +84,107 @@ program:
 Press F5 - your house should appear as normal. So far so good, but we
 haven't found out what the point of the function is...
 
-2. Add a position "parameter" to the function. We can pass information
-into a function by adding them to the brackets at the top and refering
-to them inside. Change your function to add "pos" to all of the
-positions of the shapes:
+2. Add a position "parameter" to the function. We use parameters to pass
+information into a function by adding them to the brackets at the top
+and refering to them inside. Change your existing function to add "pos"
+to all of the positions of the shapes:
 
         def house(pos):
         	toblerone(WOOD,pos+point(0,5,0),point(10,6,8))
         	toblerone(AIR,pos+point(0,3,0),point(10,6,8))
         	box(BRICK_BLOCK,pos+point(2,0,1),point(7,7,6))
         	box(BRICK_BLOCK,pos+point(4,7,1),point(3,2,6))
-        	box(AIR,pos+point(3,0,2),point(5,7+size,4))
+        	box(AIR,pos+point(3,0,2),point(5,7,4))
         	box(AIR,pos+point(4,0,1),point(3,4,1))
 
-We can now draw a house at any position:
+We can now pass in the position when we call the function, to draw a
+house at any position:
 
         house(point(5,0,10))
 
-Add another one:
+Add another two:
 
         house(point(10,0,10))
+        house(point(13,0,-8))
 
-You can make as many houses as you like.
+* Add as many houses as you like.
+* What happens when they overlap?
+
+## Step 4 Make your houses look different
+
+1. Lets add a 'roof' parameter so our houses can have different roof
+materials. Also swap the `WOOD` in the first toblerone to be `roof` :
+
+        def house(roof,pos):
+        	toblerone(roof,pos+point(0,5,0),point(10,6,8))
+        	toblerone(AIR,pos+point(0,3,0),point(10,6,8))
+        	box(BRICK_BLOCK,pos+point(2,0,1),point(7,7,6))
+        	box(BRICK_BLOCK,pos+point(4,7,1),point(3,2,6))
+        	box(AIR,pos+point(3,0,2),point(5,7,4))
+        	box(AIR,pos+point(4,0,1),point(3,4,1))
+
+Now we need to add materials to your houses:
+
+        house(COBBLESTONE,point(5,0,10))
+        house(LAPIS_LAZULI_BLOCK,point(10,0,10))
+        house(MELON,point(13,0,-8))
+
+2. Lets go further and change the shape of the houses, by adding
+height. We need to move the roof up and change the size of the walls:
+
+        def house(roof,pos,height):
+        	toblerone(roof,pos+point(0,5+height,0),point(10,6,8))
+        	toblerone(AIR,pos+point(0,3+height,0),point(10,6,8))
+        	box(BRICK_BLOCK,pos+point(2,0,1),point(7,7+height,6))
+        	box(BRICK_BLOCK,pos+point(4,7,1),point(3,2,6))
+        	box(AIR,pos+point(3,0,2),point(5,7+height,4))
+        	box(AIR,pos+point(4,0,1),point(3,4,1))
+
+        house(COBBLESTONE,point(5,0,10),1)
+        house(LAPIS_LAZULI_BLOCK,point(10,0,10),5)
+        house(MELON,point(13,0,-8),20)
+
+The melon roofed house is a tall one!
+
+* What happens if height is a minus number?
+
+## Step 5 For loops: making *loads* of houses
+
+If we want to make loads of houses, writing them all manually as
+`house(blah blah)' is a pain. One way we can make this easier is by
+using a "for" loop. Delete the houses at the bottom of your program and
+add this:
+
+        for i in range(0,10):
+            house(MELON,point(i*10,0,0),10)
+
+This will repeat the `house` line 10 times (make sure you add 4 spaces
+before), each time with i being a number described by the `range`
+function - so 0 to 10 in this case. We set the X position of the house
+by multiplying this by 10 (so each house in the row appears spaced by 10
+blocks)
+
+* Try changing 10 to something bigger!
+
+## Step 6 Randomness
+
+1. Randomness is a surprisingly important area and is used a lot in
+computer games as well as programming in general. Here we can use it to
+make every one of our houses different. Change the `house` function call
+in the loop to:
+
+        for i in range(0,10):
+            house(MELON,point(i*10,0,0),random_range(0,20))
+
+`rand_range` provides a random number between 0 and 20.
+
+2. We can also change the block material for each house using the
+function `choose_one` which randomly picks between parameters which you
+pass in - as it's quite long lets breat the line to make it easier to read:
+
+        for i in range(0,10):
+            material =
+            house(choose_one(BRICK_BLOCK,COBBLESTONE,BEDROCK,SANDSTONE),
+                  point(i*10,0,0),random_range(0,20))
+
+* Try changing the position of the houses with `rand_range`
