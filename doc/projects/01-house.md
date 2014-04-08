@@ -146,7 +146,7 @@ height. We need to move the roof up and change the size of the walls:
 
 The melon roofed house is a tall one!
 
-* What happens if height is a minus number?
+* What happens if you pass in height as a minus number?
 
 ## Step 5 For loops: making *loads* of houses
 
@@ -181,7 +181,7 @@ multiple times - it should change each time.
 
 * We can also change the block material for each house using the
 function `choose_one` which randomly picks between parameters which you
-pass in - as it's quite long lets breat the line to make it easier to read:
+pass in - as it's quite long lets break the line to make it easier to read:
 
         for i in range(0,10):
             house(choose_one(BRICK_BLOCK,COBBLESTONE,BEDROCK,SANDSTONE),
