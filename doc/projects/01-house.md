@@ -1,34 +1,34 @@
-# An infinite house generator
+# An infinite Minecraft house generator
 
 Before you start:
 
-Launch Minecraft and create a new world.
-Launch Geany
+* Launch Minecraft and create a new world.
+* Launch Geany
 
 ## Step 1 Make a roof
 
-1 Open a new file, call this `house.py`.
+* Open a new file, call this `house.py`.
 
-2 We need to import the dBsCode commands we'll be using and clear an
+* We need to import the dBsCode commands we'll be using and clear an
 area in the Minecraft world for working in. Create this program:
 
         from dbscode_minecraft import *
         bulldoze()
 
-3 **Test** Press F5 to run the program (this will also save your
+* **Test** Press F5 to run the program (this will also save your
 program for you). After a few seconds you should see a "flatworld" type
 of environment.
 
-4 Lets start with the roof. Build a prism by adding this to the end of your script:
+* Lets start with the roof. Build a prism by adding this to the end of your script:
 
         toblerone(WOOD,point(0,5,0),point(10,6,8))
 
-5. **Test** Press F5 and navigate to the centre of the world (using the
+* **Test** Press F5 and navigate to the centre of the world (using the
 coordinates at the top left of the Minecraft window). You should see a
 toblerone shape. This shape is drawn from block position 0,5,0 and is of
 size 10,6,8.
 
-6. We now need to hollow out the shape we've just drawn in order to make
+* We now need to hollow out the shape we've just drawn in order to make
 space for the walls:
 
         toblerone(AIR,point(0,3,0),point(10,6,8))
@@ -39,21 +39,21 @@ leaving a roof structure.
 
 ## Step 2 Build the walls
 
-1. Add this line so it comes after the roof toblerones:
+* Add this line so it comes after the roof toblerones:
 
         box(BRICK_BLOCK,point(2,0,1),point(7,7,6))
 
-2. Press F5 to check this - it fills the area below the roof but we have
+* Press F5 to check this - it fills the area below the roof but we have
 a hole just underneath the top. We can fill this with another box:
 
         box(BRICK_BLOCK,point(4,7,1),point(3,2,6))
 
-3. This house is not much good as it's solid, so we can hollow it out
+* This house is not much good as it's solid, so we can hollow it out
 with an air box in the middle:
 
         box(AIR,point(3,0,2),point(5,7,4))
 
-4. You can check this worked by destroying a few bricks and breaking
+* You can check this worked by destroying a few bricks and breaking
 in. Lets quickly add a door:
 
         box(AIR,point(4,0,1),point(3,4,1))
@@ -64,7 +64,7 @@ Functions are one of the founding ideas behind programming - they can
 amplify your actions, and allow you to solve difficult problems by
 breaking them into small ones.
 
-1. We use 'def' to build functions. Collect together all the code you've
+* We use 'def' to build functions. Collect together all the code you've
 just written so it looks like this - the spaces at the start of the
 lines are important - there are 4 of them:
 
@@ -112,7 +112,7 @@ Add another two:
 
 ## Step 4 Make your houses look different
 
-1. Lets add a 'roof' parameter so our houses can have different roof
+* Lets add a 'roof' parameter so our houses can have different roof
 materials. Also swap the `WOOD` in the first toblerone to be `roof` :
 
         def house(roof,pos):
@@ -129,7 +129,7 @@ Now we need to add materials to your houses:
         house(LAPIS_LAZULI_BLOCK,point(10,0,10))
         house(MELON,point(13,0,-8))
 
-2. Lets go further and change the shape of the houses, by adding
+* Lets go further and change the shape of the houses, by adding
 height. We need to move the roof up and change the size of the walls:
 
         def house(roof,pos,height):
@@ -168,7 +168,7 @@ blocks)
 
 ## Step 6 Randomness
 
-1. Randomness is a surprisingly important area and is used a lot in
+* Randomness is a surprisingly important area and is used a lot in
 computer games as well as programming in general. Here we can use it to
 make every one of our houses different. Change the `house` function call
 in the loop to:
@@ -178,7 +178,7 @@ in the loop to:
 
 `rand_range` provides a random number between 0 and 20.
 
-2. We can also change the block material for each house using the
+* We can also change the block material for each house using the
 function `choose_one` which randomly picks between parameters which you
 pass in - as it's quite long lets breat the line to make it easier to read:
 
