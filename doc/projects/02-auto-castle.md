@@ -19,7 +19,7 @@ area in the Minecraft world for working in. Create this program:
 program for you). After a few seconds you should see a "flatworld" type
 of environment.
 
- * Lets make a function to create a battlement. We'll reuse this to
+* Lets make a function to create a battlement. We'll reuse this to
 create *all* the bits of our castle we need. It'll use parameters so we
 can specify the position, length and height of a section.
 
