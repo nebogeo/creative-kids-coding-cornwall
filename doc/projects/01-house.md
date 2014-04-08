@@ -184,7 +184,6 @@ function `choose_one` which randomly picks between parameters which you
 pass in - as it's quite long lets breat the line to make it easier to read:
 
         for i in range(0,10):
-            material =
             house(choose_one(BRICK_BLOCK,COBBLESTONE,BEDROCK,SANDSTONE),
                   point(i*10,0,0),random_range(0,20))
 
