@@ -7,9 +7,9 @@ Launch Geany
 
 ## Step 1
 
-1. Open a new file, call this `house.py`.
+* Open a new file, call this `house.py`.
 
-2. We need to import the dBsCode commands we'll be using and clear an
+* We need to import the dBsCode commands we'll be using and clear an
 area in the Minecraft world for working in. Create this program:
 
 
@@ -17,11 +17,11 @@ area in the Minecraft world for working in. Create this program:
     bulldoze()
 
 
-3. **Test** Press F5 to run the program (this will also save your
+* **Test** Press F5 to run the program (this will also save your
 program for you). After a few seconds you should see a "flatworld" type
 of environment.
 
-4. Build a cube by adding this to the end of your script:
+* Build a cube by adding this to the end of your script:
 
 
      box(BRICK_BLOCK,point(0,0,0),point(10,10,10))
