@@ -9,7 +9,8 @@ Before you start:
 
 ## Step 1 Make a roof
 
-* Open a new file, call this `house.py`.
+* In Geany, from the file menu select "new", and then save as `house.py` in the "pi"
+  directory.
 
 * We need to import the dBsCode commands we'll be using and clear an
 area in the Minecraft world for working in. Create this program:
@@ -68,7 +69,8 @@ breaking them into small ones.
 
 * We use 'def' to build functions. Collect together all the code you've
 just written so it looks like this - the spaces at the start of the
-lines are important - there are 4 of them:
+lines are important - there are 4 of them, or just press the "tab" key
+once:
 
         def house():
         	toblerone(WOOD,point(0,5,0),point(10,6,8))
@@ -84,12 +86,12 @@ program:
         house()
 
 Press F5 - your house should appear as normal. So far so good, but we
-haven't found out what the point of the function is...
+haven't found out what the point of the function is yet...
 
-* Add a position "parameter" to the function. We use parameters to pass
-information into a function by adding them to the brackets at the top
-and refering to them inside. Change your existing function to add "pos"
-to all of the positions of the shapes:
+* We can add a position "parameter" to the function. We use parameters
+to pass information into a function by adding them to the brackets at
+the top and refering to them inside. Change your existing function and
+add "pos" to all of the positions of the shapes:
 
         def house(pos):
         	toblerone(WOOD,pos+point(0,5,0),point(10,6,8))
@@ -106,16 +108,17 @@ house at any position:
 
 Add another two:
 
-        house(point(10,0,10))
-        house(point(13,0,-8))
+        house(point(-5,0,5))
+        house(point(8,0,0))
 
 * Add as many houses as you like.
-* What happens when they overlap?
+* What happens if you make them overlap?
 
 ## Step 4 Make your houses look different
 
-* Lets add a 'roof' parameter so our houses can have different roof
-materials. Also swap the `WOOD` in the first toblerone to be `roof` :
+* Lets change the function to add a 'roof' parameter so our houses can
+have different roof materials. Also swap the `WOOD` in the first
+toblerone to be `roof` :
 
         def house(roof,pos):
         	toblerone(roof,pos+point(0,5,0),point(10,6,8))
@@ -138,7 +141,7 @@ height. We need to move the roof up and change the size of the walls:
         	toblerone(roof,pos+point(0,5+height,0),point(10,6,8))
         	toblerone(AIR,pos+point(0,3+height,0),point(10,6,8))
         	box(BRICK_BLOCK,pos+point(2,0,1),point(7,7+height,6))
-        	box(BRICK_BLOCK,pos+point(4,7,1),point(3,2,6))
+        	box(BRICK_BLOCK,pos+point(4,7+height,1),point(3,2,6))
         	box(AIR,pos+point(3,0,2),point(5,7+height,4))
         	box(AIR,pos+point(4,0,1),point(3,4,1))
 
@@ -157,16 +160,16 @@ If we want to make loads of houses, writing them all manually as
 using a "for" loop. Delete the houses at the bottom of your program and
 add this:
 
-        for i in range(0,10):
+        for i in range(0,5):
             house(MELON,point(i*10,0,0),10)
 
-This will repeat the `house` line 10 times (make sure you add 4 spaces
+This will repeat the `house` line 5 times (make sure you add 4 spaces
 before), each time with i being a number described by the `range`
-function - so 0 to 10 in this case. We set the X position of the house
+function - so 0 to 5 in this case. We set the X position of the house
 by multiplying this by 10 (so each house in the row appears spaced by 10
 blocks)
 
-* Try changing 10 to something bigger!
+* Try changing 5 to something bigger!
 
 ## Step 6 Randomness: making all your houses different
 

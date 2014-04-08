@@ -9,7 +9,8 @@ Before you start:
 
 ## Step 1 Make a battlement function
 
-* Open a new file, call this `castle.py`.
+* In Geany, from the file menu select "new", and then save as `castle.py` in the "pi"
+  directory.
 
 * We need to import the dBsCode commands we'll be using and clear an
 area in the Minecraft world for working in. Create this program:
@@ -44,11 +45,11 @@ Press F5 to check your battlement!
 
 ## Step 2 Make a battlement in the other direction
 
-We also need a battlement in the Y direction. Don't type this out,
+We also need a battlement in the Z direction. Don't type this out,
 copy/paste `battlement_x` and change it. Hint - you mainly need to swap
 the first and last parameters of the point functions.
 
-        def battlement_y(pos, length, height):
+        def battlement_z(pos, length, height):
             box(STONE_BRICK,pos,point(1,height,length))
             box(STONE_BRICK,pos+point(-1,height,0),point(2,2,length))
             for i in range(0,length/2):
@@ -57,7 +58,7 @@ the first and last parameters of the point functions.
 Let's test that both of these work:
 
          battlement_x(point(0,0,0),10,5)
-         battlement_y(point(0,0,0),10,5)
+         battlement_z(point(0,0,0),10,5)
 
 Press F5. You should see two battlements going at 90 degrees to each
 other from the centre of the world.
@@ -69,9 +70,9 @@ set of walls of any size and position that you pass in.
 
         def walls(pos,size):
             battlement_x(pos,size.x, size.y)
-            battlement_y(pos,size.z, size.y)
+            battlement_z(pos,size.z, size.y)
             battlement_x(pos+point(0,0,size.z),size.x, size.y)
-            battlement_y(pos+point(size.x,0,0),size.z, size.y)
+            battlement_z(pos+point(size.x,0,0),size.z, size.y)
 
 Test this with something like:
 
