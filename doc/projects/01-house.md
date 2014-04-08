@@ -7,9 +7,10 @@ Launch Geany
 
 ## Step 1
 
-1. Open a new file, call this `house.py` 2. First we need to import the
-dBsCode commands we'll be using and clear an area in the Minecraft world
-for working in. Create this program:
+1. Open a new file, call this `house.py`.
+
+2. We need to import the dBsCode commands we'll be using and clear an
+area in the Minecraft world for working in. Create this program:
 
     from dbscode_minecraft import *
     bulldoze()
