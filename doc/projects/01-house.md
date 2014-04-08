@@ -1,5 +1,7 @@
 # An infinite Minecraft house generator
 
+![Houses](https://github.com/nebogeo/dbscode/raw/master/doc/images/infinite-house.png "Some houses")
+
 Before you start:
 
 * Launch Minecraft and create a new world.
