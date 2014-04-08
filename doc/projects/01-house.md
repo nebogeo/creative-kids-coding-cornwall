@@ -9,11 +9,11 @@ Launch Geany
 
 1. Open a new file, call this `house.py`.
 
-2. We need to import the dBsCode commands we'll be using and clear an
+We need to import the dBsCode commands we'll be using and clear an
 area in the Minecraft world for working in. Create this program:
 
-    'from dbscode_minecraft import *
-    bulldoze()'
+    from dbscode_minecraft import *
+    bulldoze()
 
 3. **Test** Press F5 to run the program (this will also save your
 program for you). After a few seconds you should see a "flatworld" type
