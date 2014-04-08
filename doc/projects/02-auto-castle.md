@@ -7,7 +7,7 @@ Before you start:
 
 ## Step 1 Make a battlement function
 
-* Open a new file, call this `house.py`.
+* Open a new file, call this `castle.py`.
 
 * We need to import the dBsCode commands we'll be using and clear an
 area in the Minecraft world for working in. Create this program:
@@ -20,8 +20,8 @@ program for you). After a few seconds you should see a "flatworld" type
 of environment.
 
 * Lets make a function to create a battlement. We'll reuse this to
-create *all* the bits of our castle we need. It'll use parameters so we
-can specify the position, length and height of a section.
+create the bits of our castle we need. It'll use parameters so we can
+specify the position, length and height of a section.
 
         def battlement_x(pos, length, height):
             box(STONE_BRICK,pos,point(length,height,1))
@@ -29,19 +29,21 @@ can specify the position, length and height of a section.
             for i in range(0,length/2):
                 box(STONE_BRICK,pos+point(i*2,height+2,-1),point(1,1,3))
 
-We create two boxes, one for the wall, the other for the thicker top
-section. Then we use a for loop to create all the knobbly bits at the
-top (called crenels according to wikipedia). The loop automatically
+We create two boxes, one for the wall itself, the other for a thicker
+top section. Then we use a for loop to create all the knobbly bits at
+the top (called crenels according to wikipedia). The loop automatically
 creates enough to fill the battlement whatever length it is.
 
 Test it with something like:
 
          battlement_x(point(0,0,0),10,5)
 
+Press F5 to check your battlement!
+
 ## Step 2 Make a battlement in the other direction
 
-We need a battlement in the Y direction now. Don't type this out,
-copy/paste `battlement_x` and change it. Hint - you just need to swap
+We also need a battlement in the Y direction. Don't type this out,
+copy/paste `battlement_x` and change it. Hint - you mainly need to swap
 the first and last parameters of the point functions.
 
         def battlement_y(pos, length, height):
@@ -55,8 +57,8 @@ Let's test that both of these work:
          battlement_x(point(0,0,0),10,5)
          battlement_y(point(0,0,0),10,5)
 
-You should see two battlements going at 90 degrees to each other from
-the centre of the world.
+Press F5. You should see two battlements going at 90 degrees to each
+other from the centre of the world.
 
 ## Step 3 Make a castle_walls function
 
@@ -101,7 +103,10 @@ are centred correctly:
 
 ## Challenges
 
+* Can you make a super-castle function by nesting multiple castles
+  inside each other?
 * We haven't tried changing the block material. Can you find a way of
-  doing this so castles can be built from different block types you control?
-* Can you make super-castles by nesting multiple castles inside each other?
-* Is there a way of using randomness to make your castles more interesting?
+  doing this so castles can be built from different block types you
+  control?
+* Is there a way of using randomness to make your castles more
+  interesting?
