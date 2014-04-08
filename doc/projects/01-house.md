@@ -176,7 +176,8 @@ in the loop to:
         for i in range(0,10):
             house(MELON,point(i*10,0,0),random_range(0,20))
 
-`rand_range` provides a random number between 0 and 20.
+`rand_range` provides a random number between 0 and 20. Try running it
+multiple times - it should change each time.
 
 * We can also change the block material for each house using the
 function `choose_one` which randomly picks between parameters which you
