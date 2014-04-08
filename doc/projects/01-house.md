@@ -64,19 +64,45 @@ Functions are one of the founding principles of programming - they can
 amplify your actions, and allow you to solve difficult problems by
 breaking them into small ones.
 
-We use 'def' to build functions. Collect together all the code you've
+1. We use 'def' to build functions. Collect together all the code you've
 just written so it looks like this - the spaces at the start of the
 lines are important - there are 4 of them:
 
         def house():
         	toblerone(WOOD,point(0,5,0),point(10,6,8))
+        	toblerone(AIR,point(0,3,0),point(10,6,8))
+        	box(BRICK_BLOCK,point(2,0,1),point(7,7,6))
+        	box(BRICK_BLOCK,point(4,7,1),point(3,2,6))
+        	box(AIR,point(3,0,2),point(5,7+size,4))
+        	box(AIR,point(4,0,1),point(3,4,1))
+
+Now we can "call" this function by simply adding this to the bottom of your
+program:
+
+        house()
+
+Press F5 - your house should appear as normal. So far so good, but we
+haven't found out what the point of the function is...
+
+2. Add a position "parameter" to the function. We can pass information
+into a function by adding them to the brackets at the top and refering
+to them inside. Change your function to add "pos" to all of the
+positions of the shapes:
+
+        def house(pos):
+        	toblerone(WOOD,pos+point(0,5,0),point(10,6,8))
         	toblerone(AIR,pos+point(0,3,0),point(10,6,8))
         	box(BRICK_BLOCK,pos+point(2,0,1),point(7,7,6))
         	box(BRICK_BLOCK,pos+point(4,7,1),point(3,2,6))
         	box(AIR,pos+point(3,0,2),point(5,7+size,4))
         	box(AIR,pos+point(4,0,1),point(3,4,1))
 
-Now we can "call" this function by simply adding this to the bottom of your
-program:
+We can now draw a house at any position:
 
-        house()
+        house(point(5,0,10))
+
+Add another one:
+
+        house(point(10,0,10))
+
+You can make as many houses as you like.
