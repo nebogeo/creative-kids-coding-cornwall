@@ -188,3 +188,9 @@ pass in - as it's quite long lets break the line to make it easier to read:
                   point(i*10,0,0),random_range(0,20))
 
 * Try changing the position of the houses with `rand_range`
+
+## Challenges
+
+* Can you change the width and height of the houses?
+* Add windows - using GLASS brick type.
+* These houses definitely need chimneys too.

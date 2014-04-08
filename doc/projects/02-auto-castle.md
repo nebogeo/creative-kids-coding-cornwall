@@ -24,10 +24,10 @@ create *all* the bits of our castle we need. It'll use parameters so we
 can specify the position, length and height of a section.
 
         def battlement_x(pos, length, height):
-	        box(STONE_BRICK,pos,point(length,height,1))
-	        box(STONE_BRICK,pos+point(0,height,-1),point(length,2,3))
-	        for i in range(0,length/2):
-		        box(STONE_BRICK,pos+point(i*2,height+2,-1),point(1,1,3))
+            box(STONE_BRICK,pos,point(length,height,1))
+            box(STONE_BRICK,pos+point(0,height,-1),point(length,2,3))
+            for i in range(0,length/2):
+                box(STONE_BRICK,pos+point(i*2,height+2,-1),point(1,1,3))
 
 We create two boxes, one for the wall, the other for the thicker top
 section. Then we use a for loop to create all the knobbly bits at the
@@ -45,10 +45,10 @@ copy/paste `battlement_x` and change it. Hint - you just need to swap
 the first and last parameters of the point functions.
 
         def battlement_y(pos, length, height):
-	        box(STONE_BRICK,pos,point(1,height,length))
-	        box(STONE_BRICK,pos+point(-1,height,0),point(2,2,length))
-	        for i in range(0,length/2):
-		        box(STONE_BRICK,pos+point(-1,height+2,i*2),point(3,1,1))
+            box(STONE_BRICK,pos,point(1,height,length))
+            box(STONE_BRICK,pos+point(-1,height,0),point(2,2,length))
+            for i in range(0,length/2):
+                box(STONE_BRICK,pos+point(-1,height+2,i*2),point(3,1,1))
 
 Let's test that both of these work:
 
@@ -64,10 +64,10 @@ We can now use these two functions to create one that draws a complete
 set of walls of any size and position that you pass in.
 
         def walls(pos,size):
-	        battlement_x(pos,size.x, size.y)
-	        battlement_y(pos,size.z, size.y)
-	        battlement_x(pos+point(0,0,size.z),size.x, size.y)
-	        battlement_y(pos+point(size.x,0,0),size.z, size.y)
+            battlement_x(pos,size.x, size.y)
+            battlement_y(pos,size.z, size.y)
+            battlement_x(pos+point(0,0,size.z),size.x, size.y)
+            battlement_y(pos+point(size.x,0,0),size.z, size.y)
 
 Test this with something like:
 
@@ -93,8 +93,15 @@ something more castle like. We need to shift the towers slightly so they
 are centred correctly:
 
     def castle(pos,size):
-	    walls(pos,size)
-	    tower(pos+point(-2,0,-2),size.y*2)
-	    tower(pos+point(size.x-2,0,size.z-2),size.y*2)
-	    tower(pos+point(-2,0,size.z-2),size.y*2)
-	    tower(pos+point(size.x-2,0,-2),size.y*2)
+        walls(pos,size)
+        tower(pos+point(-2,0,-2),size.y*2)
+        tower(pos+point(size.x-2,0,size.z-2),size.y*2)
+        tower(pos+point(-2,0,size.z-2),size.y*2)
+        tower(pos+point(size.x-2,0,-2),size.y*2)
+
+## Challenges
+
+* We haven't tried changing the block material. Can you find a way of
+  doing this so castles can be built from different block types you control?
+* Can you make super-castles by nesting multiple castles inside each other?
+* Is there a way of using randomness to make your castles more interesting?
