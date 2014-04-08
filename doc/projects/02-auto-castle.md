@@ -107,7 +107,7 @@ are centred correctly:
 ## Challenges
 
 * Can you make a super-castle function by nesting multiple castles
-  inside each other?
+  inside each other (like in the screen shot above)?
 * We haven't tried changing the block material. Can you find a way of
   doing this so castles can be built from different block types you
   control?
