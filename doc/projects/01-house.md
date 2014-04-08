@@ -84,7 +84,7 @@ program:
 Press F5 - your house should appear as normal. So far so good, but we
 haven't found out what the point of the function is...
 
-2. Add a position "parameter" to the function. We use parameters to pass
+* Add a position "parameter" to the function. We use parameters to pass
 information into a function by adding them to the brackets at the top
 and refering to them inside. Change your existing function to add "pos"
 to all of the positions of the shapes:
@@ -166,7 +166,7 @@ blocks)
 
 * Try changing 10 to something bigger!
 
-## Step 6 Randomness
+## Step 6 Randomness: making all your houses different
 
 * Randomness is a surprisingly important area and is used a lot in
 computer games as well as programming in general. Here we can use it to
