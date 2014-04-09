@@ -2,10 +2,10 @@ from dbscode_minecraft import *
 bulldoze()
 
 def branch(chance,pos,d,depth):
-	if random_range(0,100)<chance: 
+	if random_range(0,100)<chance:
 		tree(pos,point(depth*8*d.x,
-					   depth*8*d.y,
-				       depth*8*d.z),depth-1)
+                               depth*8*d.y,
+                               depth*8*d.z),depth-1)
 
 def tree(pos,d,depth):
 	if depth>0:
@@ -19,6 +19,3 @@ def tree(pos,d,depth):
 #i_am_lost()
 #box(SANDSTONE,point(-100,0,-100),point(200,-200,200))
 tree(point(0,0,0),point(0,5,0),5)
-
-
-
