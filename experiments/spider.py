@@ -8,22 +8,26 @@ def leg(t, pos, size, flip):
 		if(flip):
 			x *= -1
 		pt = point(pos.x + x, pos.y - y, pos.z)
-		write_block(t, pt)
-		#write_block(t, point(pos.x + 2, pos.y - 4, pos.z))
-	
-def spider(t, leg_t, pos):
-	size = 8
+		box(t, pt, point(1, 1, 1))
+
+def eyes(t, pos):
+	draw = True
+	for x in range(-2, 3):
+		for y in range(-1, 2):
+			if True == draw:
+				box(t, point(pos.x + x, pos.y + y, pos.z), point(1, 1, 1))
+			draw = ~draw
+			
+def spider(t, leg_t, pos, size):
 	head = int(size * 0.6)
-	#eyes - fixme - draw 1 depth box, punch out with head except corners,
-	#repeat with box-size - 1 to create 8 blocks.
-	eye_size = 2 * (head - 1) #eek rounding errors.
-	#position is wrong centres vs corners, yuck.
-	#box(leg_t, point(pos.x - head, pos.y - head, pos.z + size + head), point(eye_size, eye_size, 1))
+	sphere(t, point(pos.x, pos.y, pos.z + 1 + size + head / 2), head)
 	sphere(t, pos, size)
-	sphere(t, point(pos.x, pos.y, pos.z + size + head / 2), head)
 	for z in range(-2, 2):
-		leg(leg_t, point(pos.x + size, pos.y, pos.z + 2 * z), size, False)
-		leg(leg_t, point(pos.x - size, pos.y, pos.z + 2 * z), size, True)
-	
-spider(OBSIDIAN, GOLD_BLOCK, point(0, 10, 0))
-	
+		leg(leg_t, point(pos.x + size, pos.y, pos.z + 2 * z + 1), size, False)
+		leg(leg_t, point(pos.x - size, pos.y, pos.z + 2 * z + 1), size, True)
+	eyes(leg_t, point(pos.x, pos.y, pos.z - 2 + size + head * 2))
+
+spider(choose_one(OBSIDIAN, GLOWING_OBSIDIAN, IRON_BLOCK), 
+	choose_one(GOLD_BLOCK, LEAVES, DIAMOND_BLOCK), 
+	point(0, 10, 0), 
+	random_range(6, 8))
