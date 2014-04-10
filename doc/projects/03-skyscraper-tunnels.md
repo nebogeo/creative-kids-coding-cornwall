@@ -1,6 +1,7 @@
-# Huge structures and dungeons
+# Huge skyscrapers and dungeons
 
-![A castle](https://github.com/nebogeo/dbscode/raw/master/doc/images/auto-castle.jpg "A castle")
+![Skyscrapers](https://github.com/nebogeo/dbscode/raw/master/doc/images/skyscraper.jpg "Skyscrapers")
+![Tunnels](https://github.com/nebogeo/dbscode/raw/master/doc/images/tunnels.jpg "Tunnels")
 
 Before you start:
 
