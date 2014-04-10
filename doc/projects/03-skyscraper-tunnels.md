@@ -1,7 +1,5 @@
 # Huge skyscrapers and dungeons
 
-![Logo](https://github.com/nebogeo/dbscode/raw/master/doc/images/dbscode.png "Skyscrapers")
-
 ![Skyscrapers](https://github.com/nebogeo/dbscode/raw/master/doc/images/skyscraper.jpg "Skyscrapers")
 ![Tunnels](https://github.com/nebogeo/dbscode/raw/master/doc/images/tunnels.jpg "Tunnels")
 
@@ -183,3 +181,5 @@ structure change material as it gets built?
 * Can you add lights and decoration to the dungeon?
 
 * Can you find a way to combine both above and below ground structures?
+
+![Logo](https://github.com/nebogeo/dbscode/raw/master/doc/images/dbscode.png "Skyscrapers")
