@@ -1,6 +1,9 @@
 # Huge skyscrapers and dungeons
 
-![Skyscrapers](https://github.com/nebogeo/dbscode/raw/master/doc/images/skyscraper.jpg "Skyscrapers") ![Tunnels](https://github.com/nebogeo/dbscode/raw/master/doc/images/tunnels.jpg "Tunnels")
+![Logo](https://github.com/nebogeo/dbscode/raw/master/doc/images/dbscode.png "Skyscrapers")
+
+![Skyscrapers](https://github.com/nebogeo/dbscode/raw/master/doc/images/skyscraper.jpg "Skyscrapers")
+![Tunnels](https://github.com/nebogeo/dbscode/raw/master/doc/images/tunnels.jpg "Tunnels")
 
 Before you start:
 
