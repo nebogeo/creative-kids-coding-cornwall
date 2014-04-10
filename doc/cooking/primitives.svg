@@ -376,7 +376,10 @@
      inkscape:groupmode="layer"
      id="layer1">
     <g
-       id="g6484">
+       id="g6484"
+       inkscape:export-filename="/home/dave/code/dbscode/doc/images/box.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
       <path
          inkscape:connector-curvature="0"
          id="path3003"
@@ -484,7 +487,10 @@
            sodipodi:role="line">size z</tspan></text>
     </g>
     <g
-       id="g6505">
+       id="g6505"
+       inkscape:export-filename="/home/dave/code/dbscode/doc/images/axes.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
       <path
          inkscape:connector-curvature="0"
          id="path5389"
@@ -530,7 +536,10 @@
            sodipodi:role="line">x</tspan></text>
     </g>
     <g
-       id="g6515">
+       id="g6515"
+       inkscape:export-filename="/home/dave/code/dbscode/doc/images/toblerone.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
       <path
          inkscape:connector-curvature="0"
          id="path3003-3"
@@ -648,7 +657,10 @@
          style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     </g>
     <g
-       id="g6538">
+       id="g6538"
+       inkscape:export-filename="/home/dave/code/dbscode/doc/images/cylinder.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
       <path
          transform="translate(324.64286,163.92857)"
          d="m 160,507.36218 a 5,5 0 1 1 -10,0 5,5 0 1 1 10,0 z"
@@ -752,7 +764,10 @@
          sodipodi:type="arc" />
     </g>
     <g
-       id="g6554">
+       id="g6554"
+       inkscape:export-filename="/home/dave/code/dbscode/doc/images/cone.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
       <path
          transform="translate(54.64286,363.92857)"
          d="m 160,507.36218 a 5,5 0 1 1 -10,0 5,5 0 1 1 10,0 z"
@@ -841,7 +856,10 @@
          style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     </g>
     <g
-       id="g6568">
+       id="g6568"
+       inkscape:export-filename="/home/dave/code/dbscode/doc/images/sphere.png"
+       inkscape:export-xdpi="150"
+       inkscape:export-ydpi="150">
       <path
          d="m 410,802.36218 a 60,60 0 1 1 -120,0 60,60 0 1 1 120,0 z"
          sodipodi:ry="60"
