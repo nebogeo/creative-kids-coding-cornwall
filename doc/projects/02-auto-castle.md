@@ -1,3 +1,5 @@
+![](https://github.com/nebogeo/dbscode/raw/master/doc/images/dbscode.png)
+
 # Auto-Minecraft-Castle
 
 ![A castle](https://github.com/nebogeo/dbscode/raw/master/doc/images/auto-castle.jpg "A castle")

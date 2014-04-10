@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+Exec=/home/pi/mcpi/minecraft-pi
+Icon=/home/pi/mcpi/data/images/gui/default_world.png
+Terminal=false
+Name=Minecraft
+Comment= Programming system and content development tool
+Categories=Application;Education;Development;

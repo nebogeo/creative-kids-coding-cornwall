@@ -1,4 +1,6 @@
-# dBsCode Minecraft Cheat Sheet
+![](https://github.com/nebogeo/dbscode/raw/master/doc/images/dbscode.png)
+
+# Minecraft Programming Cheat Sheet
 
 This is for the dBsCode taster sessions, learning programming via
 procedural architecture in Minecraft using the Raspberry Pi. This is a
@@ -65,7 +67,7 @@ with a radius of 10 blocks.
 ###cylinder(blocktype, position_point, radius, height):
 example: `cylinder(STONE_BRICK,point(0,0,0),6,20)`
 
-Builds a cylinder of stone brick in the center of the world radius 6, height 20.
+Builds a cylinder of stone brick in the centre of the world radius 6, height 20.
 
 ![A cylinder image](https://github.com/nebogeo/dbscode/raw/master/doc/images/cylinder.png "How a cylinder works")
 

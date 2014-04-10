@@ -1,3 +1,5 @@
+![](https://github.com/nebogeo/dbscode/raw/master/doc/images/dbscode.png)
+
 # Huge skyscrapers and dungeons
 
 ![Skyscrapers](https://github.com/nebogeo/dbscode/raw/master/doc/images/skyscraper.jpg "Skyscrapers")
@@ -181,5 +183,3 @@ structure change material as it gets built?
 * Can you add lights and decoration to the dungeon?
 
 * Can you find a way to combine both above and below ground structures?
-
-![Logo](https://github.com/nebogeo/dbscode/raw/master/doc/images/dbscode.png "Skyscrapers")
