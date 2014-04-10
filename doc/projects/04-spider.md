@@ -1,6 +1,8 @@
+![](https://github.com/nebogeo/dbscode/raw/master/doc/images/dbscode.png)
+
 # A Minecraft spider generator
 
-![Spider](https://github.com/glenpike/dbscode/raw/master/doc/images/spider.jpg "A spider")
+![Spider](https://github.com/nebogeo/dbscode/raw/master/doc/images/spider.jpg "A spider")
 
 Before you start:
 
@@ -26,7 +28,7 @@ of environment.
 
 * Lets start with the body. Build a sphere by adding this to the end of your script:
 
-	sphere(DIAMOND_BLOCK, point(0, 10, 0), 8)
+		sphere(DIAMOND_BLOCK, point(0, 10, 0), 8)
 
 * **Test** Press F5 and navigate to the centre of the world (using the 
 coordinates at the top left of the Minecraft window).  You should see a
@@ -36,7 +38,7 @@ remembering this maybe helpful later on.
 
 * Not very exciting yet, lets add a head, we make it a bit smaller than the body:
 
-	sphere(DIAMOND_BLOCK, point(0, 10, 8 + 6), 6)
+		sphere(DIAMOND_BLOCK, point(0, 10, 8 + 6), 6)
 
 * **Test** Press F5 and make sure there are 2 spheres drawn.  We've positioned
 the smaller one in front of the large sphere by moving it's centre by the radius
@@ -49,12 +51,12 @@ less than the radius.  See if you can fix it.  The correct code is shown further
 but let's give the spider some knees too.  We will draw a horizontal line out from the body
 at point(8, 10, 0), this is 8 blocks long and one thick, point(8, 1, 1)
 
-	box(OBSIDIAN, point(8, 10, 0), point(8, 1, 1))
+		box(OBSIDIAN, point(8, 10, 0), point(8, 1, 1))
 
 * Then we draw a vertical line down. We position this underneath the last horizontal block
 at point(15, 9, 0) and draw 7 blocks down using point(1, -7, 1)
 
-	box(OBSIDIAN, point(15, 9, 0), point(1, -7, 1))
+		box(OBSIDIAN, point(15, 9, 0), point(1, -7, 1))
 
 ## Step 3 Make a function for drawing legs
 
@@ -70,22 +72,22 @@ with "box" that you've just written so it looks like this
 - the spaces at the start of the lines are important - there are 4 of them, 
 or just press the "tab" key once:
 
-	def leg():
-		box(OBSIDIAN, point(8, 10, 0), point(8, 1, 1))
-		box(OBSIDIAN, point(15, 9, 0), point(1, -7, 1))
+		def leg():
+			box(OBSIDIAN, point(8, 10, 0), point(8, 1, 1))
+			box(OBSIDIAN, point(15, 9, 0), point(1, -7, 1))
 
 		
 Now we can "call" this function by simply adding this to the bottom of your
 program.  Your code should now look something like this:
 
-	sphere(DIAMOND_BLOCK, point(0, 10, 0), 8)
-	sphere(DIAMOND_BLOCK, point(0, 10, 7 + 6), 6)
-	
-	def leg():
-		box(OBSIDIAN, point(8, 10, 0), point(8, 1, 1))
-		box(OBSIDIAN, point(15, 9, 0), point(1, -7, 1))
+		sphere(DIAMOND_BLOCK, point(0, 10, 0), 8)
+		sphere(DIAMOND_BLOCK, point(0, 10, 7 + 6), 6)
+		
+		def leg():
+			box(OBSIDIAN, point(8, 10, 0), point(8, 1, 1))
+			box(OBSIDIAN, point(15, 9, 0), point(1, -7, 1))
 
-	leg()	
+		leg()	
 	
 * Press F5 - your spider should appear with one leg, now we need to make
 it draw the other 7.
@@ -95,18 +97,18 @@ to pass information into a function by adding them to the brackets at
 the top and refering to them inside. Change your existing function and
 add "pos" to all of the positions of the shapes:
 
-	def leg(pos):
-		box(OBSIDIAN, pos, point(8, 1, 1))
-		box(OBSIDIAN, pos+point(7, -1, 0), point(1, -7, 1))
+		def leg(pos):
+			box(OBSIDIAN, pos, point(8, 1, 1))
+			box(OBSIDIAN, pos+point(7, -1, 0), point(1, -7, 1))
 
 * We can now pass in the position when we call the function to draw a leg
 in any position. This will draw 4 legs on one side of the body, spaced apart 
 by a block.  Change the "leg()" line to the following:
 
-	leg(point(8, 10, 1))
-	leg(point(8, 10, 3))
-	leg(point(8, 10, 5))
-	leg(point(8, 10, 7))
+		leg(point(8, 10, 1))
+		leg(point(8, 10, 3))
+		leg(point(8, 10, 5))
+		leg(point(8, 10, 7))
 
 * Press F5 - your spider should appear with 4 legs on one side, but they may
 be slightly out of position.  See if you can fix this.  (Remember the middle
@@ -122,8 +124,8 @@ leg.
 
 * To do this we need a "for" loop.  Remove the 4 leg() "calls" and replace with this:
 
-	for i in range(0, 4):
-		leg(point(8, 10, i * 2))
+		for i in range(0, 4):
+			leg(point(8, 10, i * 2))
 
 * This will repeat the `leg` line 4 times (make sure you add 4 spaces
 before), each time with i being a number described by the `range`
@@ -135,8 +137,8 @@ blocks)
 positions the legs with negative and positive z positions, change the above
 for loop to do this:
 
-	for i in range(-2, 2):
-		leg(point(8, 10, i * 2 + 1))
+		for i in range(-2, 2):
+			leg(point(8, 10, i * 2 + 1))
 
 * Press F5 to test again - your legs should now be positioned either side
 of the vertical centre line of the sphere.
@@ -151,9 +153,9 @@ of the parameters for our point to a negative value. We can be lazy and use
 the same loop again, bonus! Copy the code which calls the leg function and 
 repeat it underneath the line you copied:
 
-	for i in range(-2, 2):
-		leg(point(8, 10, i * 2 + 1))
-		leg(point(8, 10, i * 2 + 1))
+		for i in range(-2, 2):
+			leg(point(8, 10, i * 2 + 1))
+			leg(point(8, 10, i * 2 + 1))
 
 * Right, now change one of the three parameters to a negative value.  See if
 you can work out the correct one to do before you press F5.
@@ -173,17 +175,17 @@ the other way.
 to make the legs draw correctly.  The code below shows the function and the
 for loop which calls it - replace your leg drawing code with this:
 
-	def leg(pos, flip):
-		if(flip):
-			box(GOLD_BLOCK, pos+point(-7, 0, 0), point(8, 1, 1))
-			box(OBSIDIAN, pos+point(-7, -1, 0), point(1, -7, 1))
-		else:
-			box(GOLD_BLOCK, pos, point(8, 1, 1))
-			box(OBSIDIAN, pos+point(7, -1, 0), point(1, -7, 1))
+		def leg(pos, flip):
+			if(flip):
+				box(GOLD_BLOCK, pos+point(-7, 0, 0), point(8, 1, 1))
+				box(OBSIDIAN, pos+point(-7, -1, 0), point(1, -7, 1))
+			else:
+				box(GOLD_BLOCK, pos, point(8, 1, 1))
+				box(OBSIDIAN, pos+point(7, -1, 0), point(1, -7, 1))
 
-	for i in range(-2, 2):
-		leg(point(8, 10, i * 2 + 1), False)
-		leg(point(-8, 10, i * 2 + 1), True)
+		for i in range(-2, 2):
+			leg(point(8, 10, i * 2 + 1), False)
+			leg(point(-8, 10, i * 2 + 1), True)
 
 ## Step 7 Eyes.
 
@@ -206,12 +208,12 @@ quite simply.
 
 * Add the following code to the bottom of your file:
 
-	draw = True
-	for x in range(-2, 3):
-		for y in range(-1, 2):
-			if True == draw:
-				box(GOLD_BLOCK, point(x, y + 10, 20), point(1, 1, 1))
-			draw = ~draw
+		draw = True
+		for x in range(-2, 3):
+			for y in range(-1, 2):
+				if True == draw:
+					box(GOLD_BLOCK, point(x, y + 10, 20), point(1, 1, 1))
+				draw = ~draw
 
 * Press F5 to test and you should see the eyes appear in a check pattern
 in front of the spiders head. We have a gap between the head and eyes because
@@ -220,15 +222,15 @@ we chose "20" for the z- position just to get it working.
 * Right, lets put this in a function so we can tell it where to put the
 eyes easily.  Remove the code you just wrote and replace it with the following:
 
-	def eyes(pos):
-		draw = True
-		for x in range(-2, 3):
-			for y in range(-1, 2):
-				if True == draw:
-					box(GOLD_BLOCK, point(pos.x + x, pos.y + y, pos.z), point(1, 1, 1))
-				draw = ~draw
+		def eyes(pos):
+			draw = True
+			for x in range(-2, 3):
+				for y in range(-1, 2):
+					if True == draw:
+						box(GOLD_BLOCK, point(pos.x + x, pos.y + y, pos.z), point(1, 1, 1))
+					draw = ~draw
 
-	eyes(point(0, 10, 19))
+		eyes(point(0, 10, 19))
 
 ## Step 8 Tidy up.
 
@@ -244,38 +246,38 @@ the map.
 Try to move all your "def" functions above your function calls so your code looks
 like this:
 
-	from dbscode_minecraft import *
+		from dbscode_minecraft import *
 
-	bulldoze()
-	
-	def leg(pos, flip):
-		if(flip):
-			box(GOLD_BLOCK, pos+point(-7, 0, 0), point(8, 1, 1))
-			box(OBSIDIAN, pos+point(-7, -1, 0), point(1, -7, 1))
-		else:
-			box(GOLD_BLOCK, pos, point(8, 1, 1))
-			box(OBSIDIAN, pos+point(7, -1, 0), point(1, -7, 1))
+		bulldoze()
+		
+		def leg(pos, flip):
+			if(flip):
+				box(GOLD_BLOCK, pos+point(-7, 0, 0), point(8, 1, 1))
+				box(OBSIDIAN, pos+point(-7, -1, 0), point(1, -7, 1))
+			else:
+				box(GOLD_BLOCK, pos, point(8, 1, 1))
+				box(OBSIDIAN, pos+point(7, -1, 0), point(1, -7, 1))
 
-	def eyes(pos):
-		draw = True
-		for x in range(-2, 3):
-			for y in range(-1, 2):
-				if True == draw:
-					box(GOLD_BLOCK, point(pos.x + x, pos.y + y, pos.z), point(1, 1, 1))
-				draw = ~draw
+		def eyes(pos):
+			draw = True
+			for x in range(-2, 3):
+				for y in range(-1, 2):
+					if True == draw:
+						box(GOLD_BLOCK, point(pos.x + x, pos.y + y, pos.z), point(1, 1, 1))
+					draw = ~draw
 
-	sphere(DIAMOND_BLOCK, point(0, 10, 0), 8)
-	sphere(DIAMOND_BLOCK, point(0, 10, 7 + 6), 6) 
-	for i in range(-2, 2):
-		leg(point(8, 10, i * 2 + 1), False)
-		leg(point(-8, 10, i * 2 + 1), True)
+		sphere(DIAMOND_BLOCK, point(0, 10, 0), 8)
+		sphere(DIAMOND_BLOCK, point(0, 10, 7 + 6), 6) 
+		for i in range(-2, 2):
+			leg(point(8, 10, i * 2 + 1), False)
+			leg(point(-8, 10, i * 2 + 1), True)
 
-	eyes(point(0, 10, 19))
+		eyes(point(0, 10, 19))
 	
 * Now create a spider function which draws the 2 spheres, the legs and eyes.
 This needs to take 3 parameters, the colours and the position.
 
-	def spider(body_colour, leg_colour, pos):
+		def spider(body_colour, leg_colour, pos):
 
 * Which code goes inside the function?
 
@@ -293,36 +295,36 @@ tell it the colour you want?
 
 * Here is the whole code that should do all this:
 
-	from dbscode_minecraft import *
+		from dbscode_minecraft import *
 
-	bulldoze()
+		bulldoze()
 
-	def leg(pos, flip, colour):
-		if(flip):
-			box(colour, pos+point(-7, 0, 0), point(8, 1, 1))
-			box(colour, pos+point(-7, -1, 0), point(1, -7, 1))
-		else:
-			box(colour, pos, point(8, 1, 1))
-			box(colour, pos+point(7, -1, 0), point(1, -7, 1))
+		def leg(pos, flip, colour):
+			if(flip):
+				box(colour, pos+point(-7, 0, 0), point(8, 1, 1))
+				box(colour, pos+point(-7, -1, 0), point(1, -7, 1))
+			else:
+				box(colour, pos, point(8, 1, 1))
+				box(colour, pos+point(7, -1, 0), point(1, -7, 1))
 
-	def eyes(pos, colour):
-		draw = True
-		for x in range(-2, 3):
-			for y in range(-1, 2):
-				if True == draw:
-					box(colour, point(pos.x + x, pos.y + y, pos.z), point(1, 1, 1))
-				draw = ~draw
+		def eyes(pos, colour):
+			draw = True
+			for x in range(-2, 3):
+				for y in range(-1, 2):
+					if True == draw:
+						box(colour, point(pos.x + x, pos.y + y, pos.z), point(1, 1, 1))
+					draw = ~draw
 
-	def spider(body_colour, leg_colour, pos):
-		sphere(body_colour, pos, 8)
-		sphere(body_colour, pos+point(0, 0, 13), 6) 
-		for i in range(-2, 2):
-			leg(pos+point(8, 0, i * 2 + 1), False, leg_colour)
-			leg(pos+point(-8, 0, i * 2 + 1), True, leg_colour)
+		def spider(body_colour, leg_colour, pos):
+			sphere(body_colour, pos, 8)
+			sphere(body_colour, pos+point(0, 0, 13), 6) 
+			for i in range(-2, 2):
+				leg(pos+point(8, 0, i * 2 + 1), False, leg_colour)
+				leg(pos+point(-8, 0, i * 2 + 1), True, leg_colour)
 
-		eyes(pos+point(0, 0, 19), leg_colour)
-		
-	spider(OBSIDIAN, GOLD_BLOCK, point(0, 10, 0))
+			eyes(pos+point(0, 0, 19), leg_colour)
+			
+		spider(OBSIDIAN, GOLD_BLOCK, point(0, 10, 0))
 
 
 ## Step 9 Spidercraft
