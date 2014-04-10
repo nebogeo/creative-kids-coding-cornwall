@@ -1,7 +1,6 @@
 # Huge skyscrapers and dungeons
 
-![Skyscrapers](https://github.com/nebogeo/dbscode/raw/master/doc/images/skyscraper.jpg "Skyscrapers")
-![Tunnels](https://github.com/nebogeo/dbscode/raw/master/doc/images/tunnels.jpg "Tunnels")
+![Skyscrapers](https://github.com/nebogeo/dbscode/raw/master/doc/images/skyscraper.jpg "Skyscrapers") ![Tunnels](https://github.com/nebogeo/dbscode/raw/master/doc/images/tunnels.jpg "Tunnels")
 
 Before you start:
 
@@ -10,7 +9,7 @@ Before you start:
 
 ## Step 1 Make a function that calls itself
 
-* In Geany, from the file menu select "new", and then save as `castle.py` in the "pi"
+* In Geany, from the file menu select "new", and then save as `skyscraper.py` in the "pi"
   directory.
 
 * We need to import the dBsCode commands we'll be using and clear an
