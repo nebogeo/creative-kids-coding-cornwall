@@ -34,7 +34,7 @@ This function is a bit like a for loop, in that it will repeat the box
 command as many times as count is set to at the start. If we pass 10 in,
 it checks it with the if, draws a cube and calls itself at the end with
 the count as 9 - and so on until it reaches 0, when it's finished (the
-"if" only runs it's follwing code running if count is greater than 0).
+"if" only runs it's following code running if count is greater than 0).
 
 Let's try it:
 
@@ -83,7 +83,7 @@ explode the tree - your function should now look like this:
 
 ## Step 4 Adding direction and randomness
 
-Let's breifly go back to 2 dimensions and try adding direction (a `d`
+Let's briefly go back to 2 dimensions and try adding direction (a `d`
 parameter), this is needed so we can make longer branches in different
 directions. We'll add `d` to the `pos` in the tree call and to the size
 of the box too:
@@ -124,7 +124,7 @@ Lets make it all much bigger and add a thickness to the branches.
 
 * Put `count` in the box size.
 * Change the 2 and -2's with 4 and -4 to make it go further.
-* Add back the third dimesion with two more branches.
+* Add back the third dimension with two more branches.
 
         def chance(percent):
             return random_range(0,100)<percent
@@ -171,7 +171,12 @@ the world, but it's just as easy to make shapes by taking them away. With
 
 ## Challenges
 
+* What happens if you remove the bulldoze or huge SANDSTONE box and
+  repeatedly run the program?
+
 * We haven't tried changing the block types - can you make the tree
 structure change material as it gets built?
 
 * Can you add lights and decoration to the dungeon?
+
+* Can you find a way to combine both above and below ground structures?
