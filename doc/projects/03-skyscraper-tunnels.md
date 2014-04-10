@@ -12,8 +12,8 @@ Before you start:
 
 ## Step 1 Make a function that calls itself
 
-* In Geany, from the file menu select "new", and then save as `skyscraper.py` in the "pi"
-  directory.
+* In Geany, from the file menu select "new", and then save as
+  `skyscraper.py` in the "pi" directory.
 
 * We need to import the dBsCode commands we'll be using and clear an
 area in the Minecraft world for working in. Create this program:
@@ -21,12 +21,13 @@ area in the Minecraft world for working in. Create this program:
         from dbscode_minecraft import *
         bulldoze()
 
-* **Test** Press F5 to run the program (this will also save your
-program for you). After a few seconds you should see a "flatworld" type
-of environment.
+* **Test** Press F5 to run the program (this will also save your program
+for you). After a few seconds you should see a "flatworld" type of
+environment.
 
-* In this project, we're going to see how "recursion" can be used to make
-very complex structures without very much code. Lets start with a row of blocks.
+* In this project, we're going to see how "recursion" can be used to
+make very complex structures without very much code. Lets start with a
+row of blocks.
 
         def row(pos,count):
             if count>0:
@@ -50,7 +51,7 @@ and "c" to stop it and check the code.
 ## Step 2 Make a tree
 
 We can use the same principle to do more interesting things. Change your
-`row` function into a tree:
+`row` function into a tree one:
 
     def tree(pos,count):
         if count>0:
@@ -84,12 +85,15 @@ explode the tree - your function should now look like this:
                 tree(pos+point(0,count,-2),count-1)
                 tree(pos+point(0,count,2),count-1)
 
+* Try change the amount it explodes, and making different for different
+  dimensions.
+
 ## Step 4 Adding direction and randomness
 
 Let's briefly go back to 2 dimensions and try adding direction (a `d`
-parameter), this is needed so we can make longer branches in different
-directions. We'll add `d` to the `pos` in the tree call and to the size
-of the box too:
+parameter), this is needed so we can make longer branches that point in
+different directions. We'll add `d` to the `pos` in the tree call and to
+the size of the box too:
 
         def tree(pos,d,count):
             if count>0:
@@ -101,8 +105,9 @@ of the box too:
         tree(point(0,0,0),point(0,1,0),5)
 
 Try running this, it doesn't look too interesting - the problem is that
-there are far too many branches being drawn. We can remove some of them
-using a random chance, let's write a quick function to make this easier:
+there are far too many branches being drawn all on top of each other. We
+can remove some of them using a random chance, let's write a quick
+function to make this easier:
 
         def chance(percent):
             return random_range(0,100)<percent
