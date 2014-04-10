@@ -63,7 +63,7 @@ in. Lets quickly add a door:
 
         box(AIR,point(4,0,1),point(3,4,1))
 
-## Step 3 Make a house *function*
+## Step 3 Make a house function
 
 Functions are one of the founding ideas behind programming - they can
 amplify your actions, and allow you to solve difficult problems by
@@ -83,7 +83,7 @@ once:
         	box(AIR,point(4,0,1),point(3,4,1))
 
 Now we can "call" this function by simply adding this to the bottom of your
-program:
+program (there shouldn't be any spaces before this):
 
         house()
 
