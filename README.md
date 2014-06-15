@@ -4,6 +4,8 @@ Learning programming via procedural architecture in Minecraft using the
 Raspberry Pi. Various projects and lesson plans tested on teenagers in
 Cornwall.
 
+Developed with the support of ![dBsCode](http://dbscode.co.uk/)
+
 ![](https://github.com/nebogeo/dbscode/raw/master/doc/images/title.png)
 
 # Example projects
