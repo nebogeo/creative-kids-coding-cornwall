@@ -1,8 +1,6 @@
-![](https://github.com/nebogeo/dbscode/raw/master/doc/images/dbscode.png)
-
 # A Minecraft spider generator
 
-![Spider](https://github.com/nebogeo/dbscode/raw/master/doc/images/spider.jpg "A spider")
+![Spider](https://github.com/nebogeo/dbscode/raw/master/minecraft/doc/images/spider.jpg "A spider")
 
 Before you start:
 
@@ -30,7 +28,7 @@ of environment.
 
 		sphere(DIAMOND_BLOCK, point(0, 10, 0), 8)
 
-* **Test** Press F5 and navigate to the centre of the world (using the 
+* **Test** Press F5 and navigate to the centre of the world (using the
 coordinates at the top left of the Minecraft window).  You should see a
 sphere shape.  This shape has it's centre at 0, 10, 0 and a radius of 8.
 The diameter of the sphere is actually 15 blocks, 1 smaller than 2 * radius,
@@ -47,7 +45,7 @@ less than the radius.  See if you can fix it.  The correct code is shown further
 
 ## Step 2 Make a leg
 
-* Okay, we need to draw some legs, we could draw a line straight down, 
+* Okay, we need to draw some legs, we could draw a line straight down,
 but let's give the spider some knees too.  We will draw a horizontal line out from the body
 at point(8, 10, 0), this is 8 blocks long and one thick, point(8, 1, 1)
 
@@ -60,7 +58,7 @@ at point(15, 9, 0) and draw 7 blocks down using point(1, -7, 1)
 
 ## Step 3 Make a function for drawing legs
 
-* But you need to draw 8 legs, 4 on each side.  This is where we can use something 
+* But you need to draw 8 legs, 4 on each side.  This is where we can use something
 very useful in programming called a 'function'.
 Functions let you write some code that you can use over and over again by 'calling'
 the function repeatedly.
@@ -69,32 +67,32 @@ the function repeatedly.
 
 * We use 'def' to build functions. Collect together the 2 lines beginning
 with "box" that you've just written so it looks like the code below.
-(The spaces at the start of the lines are important - there are 4 of them, 
+(The spaces at the start of the lines are important - there are 4 of them,
 or just press the "tab" key once):
 
 		def leg():
 			box(GOLD_BLOCK, point(8, 10, 0), point(8, 1, 1))
 			box(OBSIDIAN, point(15, 9, 0), point(1, -7, 1))
 
-		
+
 Now we can "call" this function by simply adding the line "leg()" to the bottom of your
 program.  Your code should now look something like this:
 
 		sphere(DIAMOND_BLOCK, point(0, 10, 0), 8)
 		sphere(DIAMOND_BLOCK, point(0, 10, 7 + 6), 6)
-		
+
 		def leg():
 			box(GOLD_BLOCK, point(8, 10, 0), point(8, 1, 1))
 			box(OBSIDIAN, point(15, 9, 0), point(1, -7, 1))
 
-		leg()	
-	
+		leg()
+
 * **Press F5** - your spider should appear with one leg, now we need to make
 it draw the other 7.
 
 We can add a position "parameter" to the function. We use parameters
 to pass information into a function by adding them to the brackets at
-the top and refering to them inside. 
+the top and refering to them inside.
 
 * Change your existing function and
 add "pos" to all of the positions of the shapes:
@@ -104,8 +102,8 @@ add "pos" to all of the positions of the shapes:
 			box(OBSIDIAN, pos+point(7, -1, 0), point(1, -7, 1))
 
 We can now pass in the position when we call the function to draw a leg
-in any position. This will draw 4 legs on one side of the body, spaced apart 
-by a block.  
+in any position. This will draw 4 legs on one side of the body, spaced apart
+by a block.
 
 * Change the "leg()" line to the following:
 
@@ -126,7 +124,7 @@ over and over again, maybe changing one small thing.  See above where we make
 4 legs - the only thing that changes is the last number (the "z" position) of the
 leg.
 
-We need a "for" loop which will repeat something a number of times.  
+We need a "for" loop which will repeat something a number of times.
 
 * Remove the 4 leg() "calls" and replace with this:
 
@@ -157,7 +155,7 @@ do two things:
 
 * Move some legs on the other side of the body - this means changing one
 of the parameters for our position to a negative value. We can be lazy and use
-the same loop again, bonus! Copy the code which calls the leg function and 
+the same loop again, bonus! Copy the code which calls the leg function and
 repeat it underneath the line you copied:
 
 		for i in range(-2, 2):
@@ -175,7 +173,7 @@ wrong, try again.  The correct code is shown later if you want to check.
 
 * The second thing we need to do is turn the legs around so they stick out
 from the spider.  We can use our function to help us again and pass in a
-Boolean (True or False) parameter which says whether to flip them around 
+Boolean (True or False) parameter which says whether to flip them around
 the other way.
 
 * Because of the way the sphere is drawn, we need to jiggle our maths a little
@@ -250,15 +248,15 @@ and another colour for the legs and eyes.
 
 * Whilst we are here, let's make it so you can draw the spider in any position on
 the map.  To make the code easier to read, we normally move all the functions to
-the top of the file.  Try to do this with your code.  
+the top of the file.  Try to do this with your code.
 
-Here is our code for the spider, try and use it to check and change the code you 
+Here is our code for the spider, try and use it to check and change the code you
 wrote rather than copy & pasting it:
 
 		from dbscode_minecraft import *
 
 		bulldoze()
-		
+
 		def leg(pos, flip):
 			if(flip):
 				box(GOLD_BLOCK, pos+point(-7, 0, 0), point(8, 1, 1))
@@ -276,14 +274,14 @@ wrote rather than copy & pasting it:
 					draw = ~draw
 
 		sphere(DIAMOND_BLOCK, point(0, 10, 0), 8)
-		sphere(DIAMOND_BLOCK, point(0, 10, 7 + 6), 6) 
+		sphere(DIAMOND_BLOCK, point(0, 10, 7 + 6), 6)
 
 		for i in range(-2, 2):
 			leg(point(8, 10, i * 2 + 1), False)
 			leg(point(-8, 10, i * 2 + 1), True)
 
 		eyes(point(0, 10, 19))
-	
+
 * Now create a spider function which draws the 2 spheres, the legs and eyes.
 This needs to take 3 parameters, the colours and the position.
 
@@ -303,7 +301,7 @@ tell it the colour you want?
 
 * Can you reposition the legs with the position of the spider?
 
-Try and do some or all of this yourself, if you've had enough, here is the whole 
+Try and do some or all of this yourself, if you've had enough, here is the whole
 spider code that should do all the things we want:
 
 		from dbscode_minecraft import *
@@ -328,13 +326,13 @@ spider code that should do all the things we want:
 
 		def spider(body_colour, leg_colour, pos):
 			sphere(body_colour, pos, 8)
-			sphere(body_colour, pos+point(0, 0, 13), 6) 
+			sphere(body_colour, pos+point(0, 0, 13), 6)
 			for i in range(-2, 2):
 				leg(pos+point(8, 0, i * 2 + 1), False, leg_colour)
 				leg(pos+point(-8, 0, i * 2 + 1), True, leg_colour)
 
 			eyes(pos+point(0, 0, 19), leg_colour)
-			
+
 		spider(OBSIDIAN, GOLD_BLOCK, point(0, 10, 0))
 
 

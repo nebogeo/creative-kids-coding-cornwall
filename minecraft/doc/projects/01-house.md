@@ -1,8 +1,6 @@
-![](https://github.com/nebogeo/dbscode/raw/master/doc/images/dbscode.png)
-
 # An infinite Minecraft house generator
 
-![Houses](https://github.com/nebogeo/dbscode/raw/master/doc/images/infinite-house.jpg "Some houses")
+![Houses](https://github.com/nebogeo/dbscode/raw/master/minecraft/doc/images/infinite-house.jpg "Some houses")
 
 Before you start:
 

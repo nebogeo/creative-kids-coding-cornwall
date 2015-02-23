@@ -1,5 +1,3 @@
-![](https://github.com/nebogeo/dbscode/raw/master/doc/images/dbscode.png)
-
 # Minecraft Programming Cheat Sheet
 
 This is for the dBsCode taster sessions, learning programming via
@@ -54,7 +52,7 @@ example: `box(CLAY, point(0,0,0), point(10,10,10))`
 
 Will create a 10x10x10 block of clay in the middle of the world (0,0,0)
 
-![A box image](https://github.com/nebogeo/dbscode/raw/master/doc/images/box.png "How a box works")
+![A box image](https://github.com/nebogeo/dbscode/raw/master/minecraft/doc/images/box.png "How a box works")
 
 ###sphere(blocktype, centre_point, radius)
 example: `sphere(MELON, point(0,10,0), 10)`
@@ -62,28 +60,28 @@ example: `sphere(MELON, point(0,10,0), 10)`
 Will create a sphere of melon slightly above the centre of the world
 with a radius of 10 blocks.
 
-![A sphere image](https://github.com/nebogeo/dbscode/raw/master/doc/images/sphere.png "How a sphere works")
+![A sphere image](https://github.com/nebogeo/dbscode/raw/master/minecraft/doc/images/sphere.png "How a sphere works")
 
 ###cylinder(blocktype, position_point, radius, height):
 example: `cylinder(STONE_BRICK,point(0,0,0),6,20)`
 
 Builds a cylinder of stone brick in the centre of the world radius 6, height 20.
 
-![A cylinder image](https://github.com/nebogeo/dbscode/raw/master/doc/images/cylinder.png "How a cylinder works")
+![A cylinder image](https://github.com/nebogeo/dbscode/raw/master/minecraft/doc/images/cylinder.png "How a cylinder works")
 
 ###cone(blocktype, position_point, radius, height):
 example: `cone(WOOD,point(0,0,0),6,20)`
 
 Same as cylinder, but with a sharp point at the top.
 
-![A cone image](https://github.com/nebogeo/dbscode/raw/master/doc/images/cone.png "How a cone works")
+![A cone image](https://github.com/nebogeo/dbscode/raw/master/minecraft/doc/images/cone.png "How a cone works")
 
 ###toblerone(blocktype, position_point, size_point)
 example: `toblerone(GLASS,point(0,0,0),point(10,10,3))`
 
 Makes a 'toblerone', referred to by lesser mortals as a prism. Useful for roof building.
 
-![A toblerone image](https://github.com/nebogeo/dbscode/raw/master/doc/images/toblerone.png "How a toblerone works")
+![A toblerone image](https://github.com/nebogeo/dbscode/raw/master/minecraft/doc/images/toblerone.png "How a toblerone works")
 
 # player info
 

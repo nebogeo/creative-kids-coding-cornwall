@@ -1,8 +1,6 @@
-![](https://github.com/nebogeo/dbscode/raw/master/doc/images/dbscode.png)
-
 # Auto-Minecraft-Castle
 
-![A castle](https://github.com/nebogeo/dbscode/raw/master/doc/images/auto-castle.jpg "A castle")
+![A castle](https://github.com/nebogeo/dbscode/raw/master/minecraft/doc/images/auto-castle.jpg "A castle")
 
 Before you start:
 
