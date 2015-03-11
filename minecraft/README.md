@@ -2,7 +2,7 @@
 
 Learning programming via procedural architecture in Minecraft using the
 Raspberry Pi. Various projects and lesson plans tested on teenagers in
-Cornwall. Developed with the support of ![dBsCode](http://dbscode.co.uk/)
+Cornwall. Developed with the support of [dBsCode](http://dbscode.co.uk/)
 
 ![](https://github.com/nebogeo/creative-kids-coding-cornwall/raw/master/minecraft/doc/images/title.png)
 
